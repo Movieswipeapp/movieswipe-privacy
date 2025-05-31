@@ -9,22 +9,29 @@
         if (userLang.startsWith('nl')) {
             window.location.href = 'nl.html';
         } 
-        else if (userLang.startsWith('ee')) {
-            window.location.href = 'en.html';
+        else {
+            window.location.href = 'en.html';  // Standaard Engels voor alle andere talen
         }
-        // Voeg meer talen toe indien nodig
     </script>
     <title>Privacy Policy</title>
 </head>
 <body>
     <!-- Fallback: Standaard Engelse content -->
     <h1>Privacy Policy</h1>
-    <p>Default English content here...</p>
+    <p>You are being redirected to the appropriate language version...</p>
+    <p>If redirection doesn't work, please select manually:</p>
     
     <!-- Handmatige taalselectie voor gebruikers -->
     <div style="position: fixed; bottom: 20px; right: 20px;">
         <a href="nl.html">Nederlands</a> | 
-        <a href="index.html">English</a>
+        <a href="en.html">English</a>
     </div>
+    
+    <!-- Automatische redirect na 3 seconden als JavaScript niet werkt -->
+    <script>
+        setTimeout(() => {
+            window.location.href = 'en.html';
+        }, 3000);
+    </script>
 </body>
 </html>
