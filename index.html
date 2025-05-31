@@ -1,1 +1,30 @@
-
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script>
+        // Detecteer browsertaal
+        const userLang = navigator.language || navigator.userLanguage;
+        
+        // Doorsturen op basis van taal
+        if (userLang.startsWith('nl')) {
+            window.location.href = 'nl.html';
+        } 
+        else if (userLang.startsWith('de')) {
+            window.location.href = 'de.html';
+        }
+        // Voeg meer talen toe indien nodig
+    </script>
+    <title>Privacy Policy</title>
+</head>
+<body>
+    <!-- Fallback: Standaard Engelse content -->
+    <h1>Privacy Policy</h1>
+    <p>Default English content here...</p>
+    
+    <!-- Handmatige taalselectie voor gebruikers -->
+    <div style="position: fixed; bottom: 20px; right: 20px;">
+        <a href="nl.html">Nederlands</a> | 
+        <a href="index.html">English</a>
+    </div>
+</body>
+</html>
